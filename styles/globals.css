@@ -1,16 +1,94 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* All overides & missing improvisations here! */
+
+.width-full {
+  min-width: 100%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.navbar-brand {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-items {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-* {
-  box-sizing: border-box;
+.navbar-logo {
+  width: clamp(28px, 32px, 72px);
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.font-size-icon {
+  font-size: 1.6rem !important;
+}
+
+.cards-grid {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.main-section {
+  padding-bottom: 12rem !important;
+}
+
+/* hacking css! */
+.scroll-auto {
+  overflow-y: auto;
+}
+
+.sidebar {
+  overflow-y: auto;
+  padding-bottom: 5vh !important;
+  padding-top: 110vh !important;
+}
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-title {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.sidebar-button {
+  margin-bottom: 10rem !important;
+}
+
+.list-item {
+  margin-left: 1.8rem;
+}
+
+/* things on tablet */
+/* sidebar width too large */
+@media (min-width: 576px) {
+  .page-layout-standard > main.page-content {
+    grid-template-columns: minmax(145px, 20%) auto;
+  }
+  .cards-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
 }
