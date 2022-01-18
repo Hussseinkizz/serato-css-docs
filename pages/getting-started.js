@@ -1,3 +1,5 @@
+import CodePrinter from '../components/CodePrinter';
+
 const gettingStarted = () => {
   return (
     <>
@@ -21,6 +23,7 @@ const gettingStarted = () => {
           Just open your terminal, and make sure to be or navigate into your
           project's directory and enter the following command.
         </p>
+        {/* <CodePrinter /> */}
       </div>
     </>
   );
