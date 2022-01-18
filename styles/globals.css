@@ -4,6 +4,10 @@
   min-width: 100%;
 }
 
+.button > a {
+  text-decoration: none !important;
+}
+
 .navbar-brand {
   display: flex;
   gap: 0.5rem;

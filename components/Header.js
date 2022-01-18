@@ -66,7 +66,11 @@ const Header = () => {
               </a>
             </Link>
           </div>
-          <button className="button">Download</button>
+          <Link href="https://github.com/Hussseinkizz/serato-css-docs/raw/main/releases/seratocss-v1.0.3.zip">
+            <button className="button">
+              <a target="_blank">Download</a>
+            </button>
+          </Link>
         </div>
       </nav>
     </header>
