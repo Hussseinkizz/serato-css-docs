@@ -6,25 +6,25 @@ const SidebarMenu = () => {
   return (
     <>
       <ul className="list sidebar-menu margin-top-9">
-        <Link href="/">
+        <Link href="/" passHref>
           <li className="menu-item color-primary--hoverable">
-            <RiIcons.RiHome7Fill class="menu-item-icon font-size-icon" />
+            <RiIcons.RiHome7Fill className="menu-item-icon font-size-icon" />
             <span className="menu-item-text font-size-large margin-left-1">
               Welcome
             </span>
           </li>
         </Link>
-        <Link href="/why-serato-css">
+        <Link href="/why-serato-css" passHref>
           <li className="menu-item color-primary--hoverable">
-            <IoIcons.IoHelpCircle class="menu-item-icon font-size-icon" />
+            <IoIcons.IoHelpCircle className="menu-item-icon font-size-icon" />
             <span className="menu-item-text font-size-large margin-left-1">
               Why Serato CSS?
             </span>
           </li>
         </Link>
-        <Link href="/getting-started">
+        <Link href="/getting-started" passHref>
           <li className="menu-item color-primary--hoverable">
-            <RiIcons.RiLightbulbFlashFill class="menu-item-icon font-size-icon" />
+            <RiIcons.RiLightbulbFlashFill className="menu-item-icon font-size-icon" />
             <span className="menu-item-text font-size-large margin-left-1">
               Getting Started
             </span>

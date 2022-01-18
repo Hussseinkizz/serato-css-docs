@@ -1,4 +1,4 @@
-import { CodePrinter } from '../components/CodePrinter';
+import CodePrinter from '../components/CodePrinter';
 
 const test = () => {
   return (

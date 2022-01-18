@@ -21,7 +21,7 @@ const whySeratoCss = () => {
         <div className="card">
           <h3 className="card-title">Predictability</h3>
           <p className="card-content">
-            Serato uses a BEM like flat class naming convention such as{' '}
+            Serato uses a BEM like flat class naming convention such as
             <span className="color-green margin-x-1">"background-green"</span>
             instead of something like "bg-green" which is not as predictable and
             easy to remember as the former and this ensures a great developer

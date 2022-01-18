@@ -9,6 +9,13 @@ const Header = () => {
       <nav className="navbar">
         <div className="navbar-start">
           <div className="navbar-brand">
+            {/* <Image
+              src={require('../public/serato.svg')}
+              alt="serato css logo"
+              className="navbar-logo"
+              width="32"
+              height="32"
+            /> */}
             <Image
               src={Logo}
               alt="serato css logo"
