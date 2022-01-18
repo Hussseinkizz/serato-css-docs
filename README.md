@@ -1,3 +1,3 @@
 # Serato CSS Docs
 
-> Under Build Phase...
+> Under Build Phase, Version 1.0.0 Ready!
