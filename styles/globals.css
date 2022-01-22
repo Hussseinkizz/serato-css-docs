@@ -8,6 +8,11 @@
   text-decoration: none !important;
 }
 
+.--dark {
+  color: #e9ecef !important;
+  background: #343a40 !important;
+}
+
 .navbar-brand {
   display: flex;
   gap: 0.5rem;

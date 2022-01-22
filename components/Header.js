@@ -1,9 +1,25 @@
+import { useStore } from '../store/store';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/serato.svg';
 import * as IoIcons from 'react-icons/io5';
 
+import Cookies from 'js-cookie';
+
 const Header = () => {
+  const {
+    state: { darkMode },
+    dispatch,
+  } = useStore();
+
+  const darkModeChangeHandler = () => {
+    dispatch({
+      type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON',
+    });
+    const newDarkMode = !darkMode;
+    Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF');
+  };
+
   return (
     <header className="page-header">
       <nav className="navbar">
@@ -66,11 +82,25 @@ const Header = () => {
               </a>
             </Link>
           </div>
-          <Link href="https://github.com/Hussseinkizz/serato-css-docs/raw/main/releases/seratocss-v1.0.3.zip">
-            <button className="button">
-              <a target="_blank">Download</a>
+          <Link href="https://github.com/Hussseinkizz/serato-css/raw/master/seratocss-v1.0.5.zip">
+            <button className={`button ${darkMode && 'button-dark'}`}>
+              <a
+                target="_blank"
+                className={`text-decoration-none ${
+                  darkMode && 'color-gray-200--hoverable'
+                }`}
+              >
+                Download
+              </a>
             </button>
           </Link>
+          {/* Dark Mode Switch */}
+          <button
+            className="darkmode-switch button"
+            onClick={darkModeChangeHandler}
+          >
+            {darkMode ? '🌚' : '🌞'}
+          </button>
         </div>
       </nav>
     </header>

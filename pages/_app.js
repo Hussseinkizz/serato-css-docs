@@ -1,12 +1,15 @@
 import Layout from '../components/Layout';
-import '../styles/serato-v1-0-3.min.css';
+import 'serato-css/serato.css';
+import { StoreProvider } from '../store/store';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <StoreProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </StoreProvider>
   );
 }
 

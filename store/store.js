@@ -1,14 +1,9 @@
-import {
-  createContext,
-  useContext,
-  useReducer,
-} from 'react/cjs/react.development';
+import { createContext, useContext, useReducer } from 'react';
+import useDarkMode from '../hooks/useDarkMode';
 
 export const store = createContext();
 const initialState = {
-  // import Cookies from js-cookie after installing it, remove this comment and uncomment the codeblock below!
-  // darkMode: Cookies.get('darkMode') === 'ON' ? true : false,
-  darkMode: false,
+  darkMode: useDarkMode(),
 };
 
 function reducer(state, action) {

@@ -1,19 +1,14 @@
-// import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import Prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
-// import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-// let codeString = '(num) => num + 1';
-// SyntaxHighlighter.registerLanguage('jsx', jsx);
+let codeString = 'npm install serato-css';
 
-// export const CodePrinter = () => {
-//   return (
-//     <SyntaxHighlighter language="javascript" style={dark}>
-//       {codeString}
-//     </SyntaxHighlighter>
-//   );
-// };
 const CodePrinter = () => {
-  return <div>foo!</div>;
+  return (
+    <SyntaxHighlighter language="javascript" style={dracula}>
+      {codeString}
+    </SyntaxHighlighter>
+  );
 };
 
 export default CodePrinter;

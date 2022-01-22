@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { useStore } from '../store/store';
 
 const whySeratoCss = () => {
+  const {
+    state: { darkMode },
+  } = useStore();
+
   return (
     <>
       <h1 className="font-subheading">Why Serato CSS?</h1>
@@ -18,7 +23,7 @@ const whySeratoCss = () => {
       </p>
       <div className="cards-grid">
         {/* card 1 */}
-        <div className="card">
+        <div className={`card ${darkMode && '--dark'}`}>
           <h3 className="card-title">Predictability</h3>
           <p className="card-content">
             Serato uses a BEM like flat class naming convention such as
@@ -32,7 +37,7 @@ const whySeratoCss = () => {
           </p>
         </div>
         {/* card 2 */}
-        <div className="card">
+        <div className={`card ${darkMode && '--dark'}`}>
           <h3 className="card-title">Feature Richness</h3>
           <p className="card-content">
             CSS frameworks usaully leave out many cool css tricks and handy
@@ -42,7 +47,7 @@ const whySeratoCss = () => {
           </p>
         </div>
         {/* card 3 */}
-        <div className="card">
+        <div className={`card ${darkMode && '--dark'}`}>
           <h3 className="card-title">Not Javascript Dependent!</h3>
           <p className="card-content">
             Some frameworks have taken this road and I also liked it, as the job
@@ -57,7 +62,7 @@ const whySeratoCss = () => {
           </p>
         </div>
         {/* card 4 */}
-        <div className="card">
+        <div className={`card ${darkMode && '--dark'}`}>
           <h3 className="card-title">Modern And Community Driven</h3>
           <p className="card-content">
             So am not a CSS god but surely some devs out there are and are
