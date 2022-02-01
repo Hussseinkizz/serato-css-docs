@@ -7,5 +7,6 @@
     - Add dark mode variant for cards component
     - Add outline component style variants eg. button-outline
     - Add playground for onsite css testing!
+    - Change grow helper classes to flex-grow helper classes!
 
 <!-- ! Important: Update Serato CSS Npm package readme with new getting started stuff! -->
