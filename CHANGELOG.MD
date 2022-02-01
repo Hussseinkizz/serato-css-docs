@@ -11,3 +11,10 @@
 
 - added syntax highlighter as code printer component
 - adding copy to clipboard as code copier
+
+## [1.0.2] Unleashing great documentation, 2022-01-24
+
+- Fixed errors with syntax highlighter
+- Completed the geting started part
+- Started working on specific component documentation pages eg. buttons
+- Added component specific pages, now working on thier routing!

@@ -1,10 +1,15 @@
-import CodePrinter from '../components/CodePrinter';
+// import useCodeSnippet from '../hooks/useCodeSnippet';
+
+import CodeHandler from '../components/CodeHandler';
 
 const test = () => {
+  // let CodeSnippet_1 = useCodeSnippet('npm install serato-css', 'bash');
+
   return (
     <div>
       <h1>foo!</h1>
-      <CodePrinter />
+      <CodeHandler />
+      {/* <CodeSnippet_1 /> */}
     </div>
   );
 };
