@@ -8,8 +8,8 @@ import { useStore } from '../store/store';
 
 // let codeSnippet = 'npm install serato-css';
 
-const CodeHandler = ({ codeSnippet, language }) => {
-  const [isCopied, setisCopied] = useState(false);
+const CodeHandler = ({ codeSnippet: { code, language } }) => {
+  const [isCopied, setIsCopied] = useState(false);
 
   const {
     state: { darkMode },
@@ -17,23 +17,24 @@ const CodeHandler = ({ codeSnippet, language }) => {
 
   return (
     <div
-      className={`code-container width-full flex-row center-with-flex background-gray-400 border-radius-normal padding-x-5 ${
+      className={`code-container width-full flex-row center-with-flex background-gray-400 border-radius-normal padding-x-5 margin-y-4 ${
         darkMode && '--dark'
       }`}
     >
       {/* Syntax Highlighter Container */}
-      <div className="grow-1">
-        <SyntaxHighlighter language={language} style={dracula}>
-          {codeSnippet}
+      <div className="grow-1 flex-wrap">
+        <SyntaxHighlighter language={language} style={dracula} wrapLongLines>
+          {code}
         </SyntaxHighlighter>
       </div>
       {/* Copy To Clipboard Container */}
       <div className="copy-container">
         <CopyToClipboard
-          text={codeSnippet}
-          onCopy={() => setisCopied(!isCopied)}
+          text={code}
+          onCopy={() => setIsCopied(true)}
+          onDoubleClick={() => setIsCopied(!isCopied)}
         >
-          <button className="button-primary">
+          <button className="button-primary serato-gradient-on-background">
             {isCopied ? 'copied' : 'copy'}
           </button>
         </CopyToClipboard>

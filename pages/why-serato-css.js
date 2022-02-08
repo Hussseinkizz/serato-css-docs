@@ -7,7 +7,7 @@ const whySeratoCss = () => {
   } = useStore();
 
   return (
-    <>
+    <section className="flex-column align-items-center">
       <h1 className="font-subheading">Why Serato CSS?</h1>
       <p className="text-align-center">
         Well there a lot of cool CSS frameworks out there and really another one
@@ -21,7 +21,7 @@ const whySeratoCss = () => {
         after all, though it initally lacked the essential pieces, so I built it
         with the following in mind.
       </p>
-      <div className="cards-grid">
+      <div className="cards-grid margin-y-4">
         {/* card 1 */}
         <div className={`card ${darkMode && '--dark'}`}>
           <h3 className="card-title">Predictability</h3>
@@ -83,7 +83,7 @@ const whySeratoCss = () => {
           <a className="link">Getting Started!</a>
         </Link>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -8,5 +8,11 @@
     - Add outline component style variants eg. button-outline
     - Add playground for onsite css testing!
     - Change grow helper classes to flex-grow helper classes!
+    - Add flag helper classes eg. flag-static
+    - Add relative spacing for children helper class eg. margin-y-small-on-children (parent > * {css})
+    - Include parent only declarative helpers eg. color-foo-on-children, targeted children should have class --child each!
+    - add cardinal direction position helpers eg. top-0
+    - Add flex basis helpers eg. flex-basis-auto
+    - Add border helpers
 
 <!-- ! Important: Update Serato CSS Npm package readme with new getting started stuff! -->

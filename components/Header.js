@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/serato.svg';
 import * as IoIcons from 'react-icons/io5';
+import { references } from '../store/data';
 
 import Cookies from 'js-cookie';
 
@@ -20,9 +21,14 @@ const Header = () => {
     Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF');
   };
 
+  const [{ downloadLink, youtubeLink, twitterLink, githubLink }] = references;
+
   return (
-    <header className="page-header">
-      <nav className="navbar">
+    <header className="header background-primary width-full padding-x-4">
+      <nav
+        className="navbar display-flex justify-content-between align-items-center grow-1 shrink-1 gap-2
+      "
+      >
         <div className="navbar-start">
           <div className="navbar-brand">
             {/* <Image
@@ -40,14 +46,16 @@ const Header = () => {
               height="32"
             />
             <Link href="/">
-              <a className="navbar-link">Serato CSS</a>
+              <a className="navbar-link color-gray-200--hoverable font-bold text-decoration-none font-size-large text-uppercase">
+                Serato CSS
+              </a>
             </Link>
             <span className="version-note padding-x-2 padding-y-1 background-indigo-200 border-radius-small font-size-small font-light margin-left-1">
               V1.0.3
             </span>
           </div>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex justify-content-flex-end flex-basis-content">
           <div className="navbar-items">
             <Link href="/getting-started" className="navbar-item">
               <a className="navbar-link color-purple-200--hoverable text-decoration-none">
@@ -59,30 +67,30 @@ const Header = () => {
                 Components
               </a>
             </Link>
-            <Link href="/request-feature" className="navbar-item">
+            <Link href="/contributions-and-features" className="navbar-item">
               <a className="navbar-link color-purple-200--hoverable text-decoration-none">
                 Request Feature?
               </a>
             </Link>
           </div>
           <div className="navbar-icons">
-            <Link href="https://youtube.com/SeratoCss">
+            <Link href={youtubeLink.item}>
               <a target="_blank">
-                <IoIcons.IoLogoYoutube className="iconic-button--no-background font-size-icon color-secondary--hoverable" />
+                <IoIcons.IoLogoYoutube className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
-            <Link href="https://twitter.com/SeratoCss">
+            <Link href={twitterLink.item}>
               <a target="_blank">
-                <IoIcons.IoLogoTwitter className="iconic-button--no-background font-size-icon color-secondary--hoverable" />
+                <IoIcons.IoLogoTwitter className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
-            <Link href="https://github.com/Hussseinkizz/serato-css">
+            <Link href={githubLink.item}>
               <a target="_blank">
-                <IoIcons.IoLogoGithub className="iconic-button--no-background font-size-icon color-secondary--hoverable" />
+                <IoIcons.IoLogoGithub className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
           </div>
-          <Link href="https://github.com/Hussseinkizz/serato-css/raw/master/seratocss-v1.0.5.zip">
+          <Link href={downloadLink.item}>
             <button className={`button ${darkMode && 'button-dark'}`}>
               <a
                 target="_blank"

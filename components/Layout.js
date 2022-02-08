@@ -1,27 +1,42 @@
+import { useStore } from '../store/store';
 import Meta from './Meta';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import { useStore } from '../store/store';
+import MobileHeader from './MobileHeader';
+import NavbarOpen from './NavbarOpen';
+import SidebarMobile from './SidebarMobile';
 
 const Layout = ({ children }) => {
   const {
-    state: { darkMode },
+    state: { navState, sidebarState, darkMode },
+    dispatch,
   } = useStore();
 
   return (
     <>
       <Meta />
-      {/* Using Serato CSS's standard layout */}
+      {/* Using A Custom Layout */}
       <div
-        className={`app page-layout-standard width-full ${
+        className={`app width-full height-viewport position-relative ${
           darkMode && 'background-gray-900 color-gray-200'
         }`}
+        onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
       >
-        <Header />
-        <main className="page-content">
+        {/* app header / app bar */}
+        <div className="app-header position-sticky top-0">
+          <Header />
+          <MobileHeader />
+        </div>
+        {/* app sidebar and mobile navbar */}
+        <section className="display-flex">
+          {navState && <NavbarOpen />}
           <Sidebar />
-          <section className="main-section">{children}</section>
-        </main>
+          {sidebarState && <SidebarMobile />}
+          {/* app content / main */}
+          <main className="main-content responsive-padding-x-medium padding-y-6">
+            {children}
+          </main>
+        </section>
       </div>
     </>
   );

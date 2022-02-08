@@ -1,36 +1,55 @@
 import Link from 'next/link';
 import * as IoIcons from 'react-icons/io5';
 import * as RiIcons from 'react-icons/ri';
+import * as HiIcons from 'react-icons/hi';
+import { useStore } from '../store/store';
 
 const SidebarMenu = () => {
+  const {
+    state: { sidebarState, darkMode },
+    dispatch,
+  } = useStore();
+
   return (
     <>
-      <ul className="list sidebar-menu margin-top-9">
+      <div className="sidebar-menu margin-bottom-2 padding-x-1 background-gray-100 padding-bottom-4">
+        {/* sidebar toggle */}
+        <button
+          className="sidebar-toggle iconic-button font-size-icon color-custom-secondary--hoverable border-radius-normal"
+          onClick={() => dispatch({ type: 'TOGGLE_SIDEBAR' })}
+        >
+          {sidebarState ? (
+            <HiIcons.HiChevronDoubleLeft />
+          ) : (
+            <HiIcons.HiChevronDoubleRight />
+          )}
+        </button>
+
         <Link href="/" passHref>
-          <li className="menu-item color-primary--hoverable">
+          <div className="sidebar-menu-item color-primary--hoverable margin-top-4">
             <RiIcons.RiHome7Fill className="menu-item-icon font-size-icon" />
-            <span className="menu-item-text font-size-large margin-left-1">
-              Welcome
-            </span>
-          </li>
+            <span className="menu-item-text font-size-large">Welcome</span>
+          </div>
         </Link>
+
         <Link href="/why-serato-css" passHref>
-          <li className="menu-item color-primary--hoverable">
+          <div className="sidebar-menu-item color-primary--hoverable">
             <IoIcons.IoHelpCircle className="menu-item-icon font-size-icon" />
-            <span className="menu-item-text font-size-large margin-left-1">
+            <span className="menu-item-text font-size-large">
               Why Serato CSS?
             </span>
-          </li>
+          </div>
         </Link>
+
         <Link href="/getting-started" passHref>
-          <li className="menu-item color-primary--hoverable">
+          <div className="sidebar-menu-item color-primary--hoverable">
             <RiIcons.RiLightbulbFlashFill className="menu-item-icon font-size-icon" />
-            <span className="menu-item-text font-size-large margin-left-1">
+            <span className="menu-item-text font-size-large">
               Getting Started
             </span>
-          </li>
+          </div>
         </Link>
-      </ul>
+      </div>
     </>
   );
 };
