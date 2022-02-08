@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useStore } from '../store/store';
 
-const whySeratoCss = () => {
+const WhySeratoCss = () => {
   const {
     state: { darkMode },
   } = useStore();
@@ -87,4 +87,4 @@ const whySeratoCss = () => {
   );
 };
 
-export default whySeratoCss;
+export default WhySeratoCss;

@@ -45,7 +45,7 @@ const Header = () => {
               width="32"
               height="32"
             />
-            <Link href="/">
+            <Link href="/" passHref>
               <a className="navbar-link color-gray-200--hoverable font-bold text-decoration-none font-size-large text-uppercase">
                 Serato CSS
               </a>
@@ -57,40 +57,44 @@ const Header = () => {
         </div>
         <div className="navbar-end flex justify-content-flex-end flex-basis-content">
           <div className="navbar-items">
-            <Link href="/getting-started" className="navbar-item">
+            <Link href="/getting-started" className="navbar-item" passHref>
               <a className="navbar-link color-purple-200--hoverable text-decoration-none">
                 Getting Started
               </a>
             </Link>
-            <Link href="/components" className="navbar-item">
+            <Link href="/components" className="navbar-item" passHref>
               <a className="navbar-link color-purple-200--hoverable text-decoration-none">
                 Components
               </a>
             </Link>
-            <Link href="/contributions-and-features" className="navbar-item">
+            <Link
+              href="/contributions-and-features"
+              className="navbar-item"
+              passHref
+            >
               <a className="navbar-link color-purple-200--hoverable text-decoration-none">
                 Request Feature?
               </a>
             </Link>
           </div>
           <div className="navbar-icons">
-            <Link href={youtubeLink.item}>
+            <Link href={youtubeLink.item} passHref>
               <a target="_blank">
                 <IoIcons.IoLogoYoutube className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
-            <Link href={twitterLink.item}>
+            <Link href={twitterLink.item} passHref>
               <a target="_blank">
                 <IoIcons.IoLogoTwitter className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
-            <Link href={githubLink.item}>
+            <Link href={githubLink.item} passHref>
               <a target="_blank">
                 <IoIcons.IoLogoGithub className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
               </a>
             </Link>
           </div>
-          <Link href={downloadLink.item}>
+          <Link href={downloadLink.item} passHref>
             <button className={`button ${darkMode && 'button-dark'}`}>
               <a
                 target="_blank"

@@ -49,6 +49,7 @@ const SidebarMobile = () => {
                       listItem
                     )}/${makeSlug(listItem)}
                       }`}
+                    passHref
                   >
                     <span className="list-item color-gray-600 color-gray-400-on-hover">
                       {listItem}
@@ -62,7 +63,7 @@ const SidebarMobile = () => {
       </div>
 
       {/* sidebar action button */}
-      <Link href="/contributions-and-features">
+      <Link href="/contributions-and-features" passHref>
         <button className="sidebar-action-button button-primary margin-x-2">
           Contribute?
         </button>

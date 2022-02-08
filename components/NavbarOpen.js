@@ -16,7 +16,7 @@ const NavbarOpen = () => {
       <nav className="open-navbar flex-column background-gray-100 padding-2 border-radius-normal">
         <ul className="navbar-links border-bottom-on-all-children margin-y-smallest-on-children">
           <li>
-            <Link href="/getting-started" className="navbar-item">
+            <Link href="/getting-started" className="navbar-item" passHref>
               <a
                 className="navbar-link color-primary--hoverable text-decoration-none"
                 onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -26,7 +26,7 @@ const NavbarOpen = () => {
             </Link>
           </li>
           <li>
-            <Link href="/components" className="navbar-item">
+            <Link href="/components" className="navbar-item" passHref>
               <a
                 className="navbar-link color-primary--hoverable text-decoration-none"
                 onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -36,7 +36,11 @@ const NavbarOpen = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contributions-and-features" className="navbar-item">
+            <Link
+              href="/contributions-and-features"
+              className="navbar-item"
+              passHref
+            >
               <a
                 className="navbar-link color-primary--hoverable text-decoration-none"
                 onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -47,7 +51,7 @@ const NavbarOpen = () => {
           </li>
         </ul>
         <div className="navbar-icons">
-          <Link href={youtubeLink.item}>
+          <Link href={youtubeLink.item} passHref>
             <a
               target="_blank"
               onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -55,7 +59,7 @@ const NavbarOpen = () => {
               <IoIcons.IoLogoYoutube className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
             </a>
           </Link>
-          <Link href={twitterLink.item}>
+          <Link href={twitterLink.item} passHref>
             <a
               target="_blank"
               onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -63,7 +67,7 @@ const NavbarOpen = () => {
               <IoIcons.IoLogoTwitter className="iconic-button--no-background font-size-icon color-custom-secondary--hoverable" />
             </a>
           </Link>
-          <Link href={githubLink.item}>
+          <Link href={githubLink.item} passHref>
             <a
               target="_blank"
               onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}
@@ -72,7 +76,7 @@ const NavbarOpen = () => {
             </a>
           </Link>
         </div>
-        <Link href={downloadLink.item}>
+        <Link href={downloadLink.item} passHref>
           <button
             className={`button ${darkMode && 'button-dark'}`}
             onClick={() => dispatch({ type: navState && 'HIDE_NAV' })}

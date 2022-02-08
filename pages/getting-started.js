@@ -4,7 +4,7 @@ import StaticFlag from '../components/StaticFlag';
 import TextHighlighter from '../components/TextHighlighter';
 import { codeExamples, references } from '../store/data';
 
-const gettingStarted = () => {
+const GettingStarted = () => {
   const [{ cdnLink, cdnLinkCSS, cssLink, npmInstall, npmUse, htmlSample }] =
     codeExamples;
   const [{ downloadLink }] = references;
@@ -106,4 +106,4 @@ const gettingStarted = () => {
   );
 };
 
-export default gettingStarted;
+export default GettingStarted;
