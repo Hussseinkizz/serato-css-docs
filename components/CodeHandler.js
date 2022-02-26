@@ -8,7 +8,7 @@ import { useStore } from '../store/store';
 
 // let codeSnippet = 'npm install serato-css';
 
-const CodeHandler = ({ codeSnippet: { code, language } }) => {
+const CodeHandler = ({ codeSnippet: { code, language }, dontShowCopy }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const {
@@ -28,17 +28,21 @@ const CodeHandler = ({ codeSnippet: { code, language } }) => {
         </SyntaxHighlighter>
       </div>
       {/* Copy To Clipboard Container */}
-      <div className="copy-container">
-        <CopyToClipboard
-          text={code}
-          onCopy={() => setIsCopied(true)}
-          onDoubleClick={() => setIsCopied(!isCopied)}
-        >
-          <button className="button-primary serato-gradient-on-background">
-            {isCopied ? 'copied' : 'copy'}
-          </button>
-        </CopyToClipboard>
-      </div>
+      {dontShowCopy ? (
+        ''
+      ) : (
+        <div className="copy-container">
+          <CopyToClipboard
+            text={code}
+            onCopy={() => setIsCopied(true)}
+            onDoubleClick={() => setIsCopied(!isCopied)}
+          >
+            <button className="button-primary serato-gradient-on-background">
+              {isCopied ? 'copied' : 'copy'}
+            </button>
+          </CopyToClipboard>
+        </div>
+      )}
     </div>
   );
 };
@@ -46,11 +50,13 @@ const CodeHandler = ({ codeSnippet: { code, language } }) => {
 CodeHandler.propTypes = {
   codeString: propTypes.string.isRequired,
   language: propTypes.string,
+  dontShowCopy: propTypes.bool,
 };
 
 CodeHandler.defaultProps = {
   codeString: 'Some code to highlight!',
   language: 'html',
+  dontShowCopy: false,
 };
 
 export default CodeHandler;

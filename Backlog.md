@@ -14,5 +14,11 @@
     - add cardinal direction position helpers eg. top-0
     - Add flex basis helpers eg. flex-basis-auto
     - Add border helpers
+    - Fix custom page title not working correctly
+    - Use logical properties such as padding-inline for axis helpers eg. padding-x
+    - Add font-small heading for a simpler heading than subheading.
+    - Add text-reset class to reset all styles on given text eg. text-capitalize
+    - Fix flex helper class
+    - Add flow helper classes for handy spacing on all children eg. flow-top, flow-bottom etc
 
 <!-- ! Important: Update Serato CSS Npm package readme with new getting started stuff! -->

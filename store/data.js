@@ -57,13 +57,13 @@ export const sidebarLists = [
 ];
 
 // Serato Css usage html sample
-export const htmlSampleGenerator = () => {
-  `"
-    <html lang="en">
+export const htmlSample = `    <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Important meta tag for reponsive scaling -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <!-- serato css cdn link -->
         <link
           rel="stylesheet"
           href="https://cdn.jsdeliver.net/npm/serato-css/serato-css.min.css"
@@ -72,11 +72,14 @@ export const htmlSampleGenerator = () => {
       </head>
 
       <body>
-        <h1 class="serato-gradient-on-text font-heading">Serato CSS</h1>
+        <section class='center-with-grid'>
+          <h1 class="serato-gradient-on-text font-heading">
+            Serato CSS
+          </h1>
+        <section>
       </body>
     </html>
-  "`;
-};
+`;
 
 // code snippets parsed to syntax highlighter, used as examples!
 export const codeExamples = [
@@ -115,7 +118,7 @@ export const codeExamples = [
       id: 6,
       description: 'serato css usage sample code',
       language: 'html',
-      code: htmlSampleGenerator,
+      code: htmlSample,
     },
   },
 ];
@@ -142,6 +145,22 @@ export const references = [
       id: 4,
       description: 'Serato CSS github link',
       item: 'https://github.com/Hussseinkizz/serato-css',
+    },
+    cssIntelliSenseLink: {
+      id: 5,
+      description:
+        'IntelliSense For CSS Class Names In HTML vscode extension link',
+      item: '#',
+    },
+    starterKitLink: {
+      id: 6,
+      description: 'serato css starter kit link',
+      item: '#',
+    },
+    themingKitCodepen: {
+      id: 7,
+      description: 'serato css theming kit codepen link',
+      item: '#',
     },
   },
 ];

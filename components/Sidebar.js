@@ -41,10 +41,10 @@ const Sidebar = () => {
                 {/* 📋 Note: The route to each specific item is tied with the project's pages directory structure, it's a hack but it works! */}
                 {list.items.map((listItem, i) => (
                   <li className="sidebar-list-item list-style-none" key={i}>
-                    <Meta
+                    {/* <Meta
                       title={`Serato CSS - ${listItem}`}
                       keywords={listItem}
-                    />
+                    /> */}
                     <Link
                       href={`/${toLowerCase(list.title)}/${makeSlug(
                         listItem

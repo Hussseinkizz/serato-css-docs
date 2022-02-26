@@ -1,13 +1,17 @@
+import Link from 'next/link';
 import CodeHandler from '../components/CodeHandler';
 import Comment from '../components/Comment';
 import StaticFlag from '../components/StaticFlag';
 import TextHighlighter from '../components/TextHighlighter';
 import { codeExamples, references } from '../store/data';
+import * as IoIcons from 'react-icons/io5';
 
 const GettingStarted = () => {
   const [{ cdnLink, cdnLinkCSS, cssLink, npmInstall, npmUse, htmlSample }] =
     codeExamples;
-  const [{ downloadLink }] = references;
+  const [
+    { downloadLink, cssIntelliSenseLink, starterKitLink, themingKitCodepen },
+  ] = references;
 
   return (
     <section className="container-fluid">
@@ -93,13 +97,80 @@ const GettingStarted = () => {
 
         {/* tips & recommendations */}
         <div>
-          <h2 className="font-subheading">Tips And Recommendations</h2>
+          <h2 className="font-subheading"># Tips And Recommendations</h2>
           <p>
             Consider the following for a super dope experince, and firstly if
             you used the cdn approach to use serato css, here is an example of
             how you can use it right away!
           </p>
-          {/* <CodeHandler codeSnippet={htmlSample} /> */}
+          <CodeHandler codeSnippet={htmlSample} dontShowCopy />
+          <p>
+            In the example above we're grabbing serato css using a cdn link and
+            then use it's handy helper class
+            <TextHighlighter text="center-with-grid" /> on a section to center
+            the containing stuff, in this case, the h1 with other serato css
+            helper classes which give the text a cool gradient and make it bold
+            with title looks. So go on and start using other cool handy classes
+            of serato css, but also consider the following tips.
+          </p>
+          <div>
+            <h3 className="font-subheading font-size-normal margin-top-4">
+              # Use Vscode extension to get autocompletion on classes.
+            </h3>
+            <p>
+              This is super handy cause starting out you won't know what the
+              framework has in house for everything though you won't struggle to
+              remember class names as is with other frameworks cause here we use
+              a flat naming covention for almost everything so button is button
+              or it's variance and others such as button-primary, margin-top-1,
+              background-gray-900, color-white etc. Everything is quite
+              relatable and predictable no complex class names to make you check
+              docs everytime. <br />
+              <br /> Assuming you use visual studio code, "IntelliSense for CSS
+              class names in HTML" extension by Zignd can get the work done.
+              <br />
+              <Link href={cssIntelliSenseLink.item} passHref>
+                <a className="link">
+                  IntelliSense For CSS Class Names In HTML - Vscode Extention
+                </a>
+              </Link>
+            </p>
+          </div>
+          <div>
+            <h3 className="font-subheading font-size-normal margin-top-4">
+              # Look into Serato CSS resources and examples to see it in action!
+            </h3>
+            <p>
+              You can ofcourse get the
+              <Link href={starterKitLink.item} passHref>
+                <a className="link margin-x-1">Serato CSS Starter Kit</a>
+              </Link>
+              which contains the theming kit, some serato css cheat sheet and
+              other great resources to get you started including links to other
+              projects that are using serato css. But if that's too much for
+              you, you can then just check out this codepen!
+              <br />
+              <Link href={themingKitCodepen.item} passHref>
+                <a className="link margin-x-1">
+                  Serato CSS Theming Kit Codepen
+                </a>
+              </Link>
+            </p>
+          </div>
+          <div className="margin-bottom-2 margin-top-4 font-subheading background-gray-200 padding-4 border-radius-normal text-align-center font-size-normal text-reset-casing">
+            Those up should give you a good start, let's dive into the
+            documentation to get a hang of this.
+            <br />
+            <div className="display-flex justify-content-center margin-top-2">
+              <span className="dispaly-flex gap-1 align-items-center justify-content-center">
+                Next Up
+                <IoIcons.IoChevronForwardOutline className="icon animation-horizontal is-animating" />
+              </span>
+              <Link href="/base/reset/reset">
+                <a className="link">Base - Reset</a>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

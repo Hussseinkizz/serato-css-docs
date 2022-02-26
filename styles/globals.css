@@ -6,6 +6,10 @@
   --third-layer: 200;
 }
 
+.text-reset-casing {
+  text-transform: none;
+}
+
 .width-full {
   min-width: 100%;
 }
@@ -204,10 +208,10 @@ header {
 @media (min-width: 576px) {
   /* .page-layout-standard > main.page-content {
     grid-template-columns: minmax(145px, 20%) auto;
-  }
-  .cards-grid {
-    grid-template-columns: repeat(2, 2fr);
   } */
+  .cards-grid {
+    grid-template-columns: repeat(2, auto);
+  }
   .sidebar {
     display: flex;
   }
