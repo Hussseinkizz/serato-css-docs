@@ -129,7 +129,7 @@ export const references = [
     downloadLink: {
       id: 1,
       description: 'Serato CSS direct download link',
-      item: 'https://github.com/Hussseinkizz/serato-css/raw/master/seratocss-v1.0.5.zip',
+      item: 'https://github.com/Hussseinkizz/serato-css/blob/master/Files/seratocss-v1.0.5.zip?raw=true',
     },
     youtubeLink: {
       id: 2,
