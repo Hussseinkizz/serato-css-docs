@@ -47,7 +47,7 @@ const MobileHeader = () => {
               </a>
             </Link>
             <span className="version-note padding-x-2 padding-y-1 background-indigo-200 border-radius-small font-size-small font-light margin-left-1">
-              V1.0.3
+              V1.0.5
             </span>
           </div>
         </div>

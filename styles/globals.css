@@ -67,7 +67,7 @@
 
 /*  custom header styles */
 header {
-  position: sticky;
+  position: sticky; 
   top: 0;
   height: var(--header-height);
   display: flex;
@@ -211,6 +211,9 @@ header {
   } */
   .cards-grid {
     grid-template-columns: repeat(2, auto);
+    justify-items: center;
+    align-items: flex-start;
+    gap: 20px;
   }
   .sidebar {
     display: flex;
