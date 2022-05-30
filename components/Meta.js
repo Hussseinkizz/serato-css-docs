@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+
 //todo: use next-seo package for this!
 
 const Meta = ({ title, keywords, description }) => {
@@ -8,12 +9,13 @@ const Meta = ({ title, keywords, description }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
-      <link
+     <link
         rel="shortcut icon"
-        href="/public/favicon.ico"
+        href="../public/favicon.ico"
         type="image/x-icon"
-      />
-      <title>{title}</title>
+      /> 
+      
+      <title>{title} | {description}</title>
     </Head>
   );
 };

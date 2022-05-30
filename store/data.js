@@ -74,7 +74,7 @@ export const htmlSample = `    <html lang="en">
       <body>
         <section class='center-with-grid'>
           <h1 class="serato-gradient-on-text font-heading">
-            Serato CSS
+            Serato CSS 
           </h1>
         <section>
       </body>
@@ -161,6 +161,12 @@ export const references = [
       id: 7,
       description: 'serato css theming kit codepen link',
       item: '#',
+    },
+     documentationRepoLink:{
+      id: 8,
+      description: 'serato css documentation repo link',
+      item: 'https://github.com/Hussseinkizz/serato-css-docs',
+
     },
   },
 ];
