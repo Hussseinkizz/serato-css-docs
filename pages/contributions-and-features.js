@@ -26,8 +26,16 @@ const ContributionsAndFeatures = () => {
       <ContactForm />
       <div className="flex-column align-items-center">
         <h2>Go here to our github repo for contributions</h2>
-        <h3>Development repo</h3>
-        <h3>Documentation repo</h3>
+        <Link href={githubLink.item} passHref>
+            <a target="_blank" className='link'>
+            <h3>Development repo</h3>
+            </a>
+        </Link>
+        <Link href={githubLink.item} passHref>
+            <a target="_blank" className='link'>
+            <h3>Documentation repo</h3>
+            </a>
+        </Link>
       </div>
       <div className="flex-column align-items-center">
         <h2 className="font-subheading font-size-2">
